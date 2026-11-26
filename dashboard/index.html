@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar — pre-token protocols ranked by implied launch value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="brand">
+    <span class="sweep" aria-hidden="true"><i></i></span>
+    <div>
+      <h1>TOKEN RADAR</h1>
+      <p class="tagline">Protocols that record no token yet, ranked by what a launch would be worth — and how to farm each one.</p>
+    </div>
+  </div>
+  <div class="mast-meta" id="mastMeta"></div>
+</header>
+
+<section class="stats" id="stats" aria-label="Board totals"></section>
+
+<section class="card model" aria-labelledby="modelTitle">
+  <h2 id="modelTitle">How the value model works</h2>
+  <p id="modelText"></p>
+  <p class="formula" id="modelFormula"></p>
+</section>
+
+<section class="card controls" aria-label="Board controls">
+  <div class="ctl">
+    <label for="q">Search</label>
+    <input type="search" id="q" placeholder="Name, slug, category, chain" autocomplete="off">
+  </div>
+  <div class="ctl">
+    <label for="catSel">Category</label>
+    <select id="catSel"></select>
+  </div>
+  <div class="ctl">
+    <label for="chainSel">Chain</label>
+    <select id="chainSel"></select>
+  </div>
+  <div class="ctl">
+    <label for="minSel">Minimum TVL</label>
+    <select id="minSel">
+      <option value="0">Any size</option>
+      <option value="10000000">$10M and up</option>
+      <option value="50000000">$50M and up</option>
+      <option value="250000000">$250M and up</option>
+      <option value="1000000000">$1B and up</option>
+    </select>
+  </div>
+  <div class="ctl check">
+    <label for="watchOnly"><input type="checkbox" id="watchOnly"> Watchlist only</label>
+  </div>
+  <div class="ctl views" role="group" aria-label="Which set to show">
+    <button type="button" id="viewBoard" class="viewbtn on">Pre-token board</button>
+    <button type="button" id="viewLive" class="viewbtn">Already trading</button>
+  </div>
+  <p class="count" id="rowCount"></p>
+</section>
+
+<main>
+  <section class="card table-card" id="boardView">
+    <div class="table-wrap">
+      <table id="boardTable">
+        <caption>Pre-token protocols by implied launch value. Select a column heading to sort; select a row for its model breakdown and farm plan.</caption>
+        <thead><tr id="boardHead"></tr></thead>
+        <tbody id="boardBody"></tbody>
+      </table>
+      <p class="empty" id="emptyMsg" hidden>No protocol matches those filters. Loosen the search, the minimum TVL or the watchlist toggle to see the board again.</p>
+    </div>
+  </section>
+
+  <section class="card table-card" id="liveView" hidden>
+    <div class="table-wrap">
+      <table id="liveTable">
+        <caption>The largest protocols whose token already trades. They are not ranked: the market has priced them. The board uses them only to calibrate what a dollar of TVL is worth, category by category.</caption>
+        <thead><tr>
+          <th scope="col">Protocol</th><th scope="col">Category</th><th scope="col" class="num">TVL</th>
+          <th scope="col" class="num">7d</th><th scope="col" class="num">Market cap</th><th scope="col" class="num">Mcap / TVL</th>
+        </tr></thead>
+        <tbody id="liveBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card detail" id="detailView" hidden aria-labelledby="detailName"></section>
+</main>
+
+<footer>
+  <p id="footNote"></p>
+</footer>
+
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
