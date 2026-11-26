@@ -317,6 +317,7 @@
     $('viewBoard').className = 'viewbtn' + (state.view === 'board' ? ' on' : '');
     $('viewLive').className = 'viewbtn' + (state.view === 'live' ? ' on' : '');
     var detail = state.selected !== null && state.view === 'board';
+    document.body.classList.toggle('detail-open', detail);
     $('detailView').hidden = !detail;
     $('boardView').hidden = detail || state.view !== 'board';
     $('liveView').hidden = detail || state.view !== 'live';
