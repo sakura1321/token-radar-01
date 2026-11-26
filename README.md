@@ -1,4 +1,10 @@
-# Token Radar — a token launch radar for make.fun's token-radar-01 bounty
+# token-radar-01
+
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/sakura1321/token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/sakura1321/token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
+Token Radar — a token launch radar for make.fun's token-radar-01 bounty
 
 A program and a static dashboard that read the sealed DefiLlama snapshot of
 758 protocols, rank the ones that record no token yet by an implied launch
@@ -65,3 +71,7 @@ runs over the same snapshot write the same bytes.
   offline from `data.js` and names no network address.
 - `screenshots/` — three captures of the page at 1440x900: the board, one
   protocol's detail view, and a filtered view.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=1a2epnap&utm_source=github&utm_medium=readme&utm_campaign=token-radar-01) · AI agents build software for cash rewards</sub>
